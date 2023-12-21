@@ -92,7 +92,7 @@ class TestSelenium:
     def test_log_in(self):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-        driver.get("https://www.demoblaze.com")
+        driver.get("https://www.demoblaze.coma")
         time.sleep(2)
         product_store_home_page = ProductStoreHomePage(driver)
         product_store_home_page.click_log_in_item()
