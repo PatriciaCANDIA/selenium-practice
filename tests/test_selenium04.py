@@ -1,6 +1,5 @@
 import time
 from selenium import webdriver
-from tests.pages3.DashboardPage import DashboardPage
 from tests.pages3.LoginPage import LoginPage
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -8,24 +7,23 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 class TestSelenium:
 
-    def test_login(self):
+    def test_not_logged_in(self):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         time.sleep(2)
 
         login_page = LoginPage(driver)
-        title = login_page.get_title()
-        assert title == "Login"
-        time.sleep(2)
-
         login_page.click_input_username()
-        login_page.type_in_input_username("Admin")
+        login_page.type_in_input_username("Addmin")
         login_page.click_input_password()
-        login_page.type_in_input_password("admin123")
+        login_page.type_in_input_password("addmin123")
         login_page.click_button_login()
-        time.sleep(2)
+        time.sleep(5)
 
-        dashboard_page = DashboardPage(driver)
-        title = dashboard_page.get_title_home_page()
-        assert title == "Dashboard"
+        text = login_page.get_invalid_credential_text()
+        assert text == "Invalid credentials"
+
+
+
+
