@@ -23,25 +23,25 @@ class TestSelenium:
 
         dashboard_page = DashboardPage(driver)
         title = dashboard_page.get_time_at_work_section_title()
-        assert title == "Time at Work"
+        assert title == "Time at Work", "Time at Work doesnt exist"
         time.sleep(2)
 
         title = dashboard_page.get_my_actions_title()
-        assert title == "My Actions"
+        assert title == "My Actions", "My Actions doesnt exist"
 
         title = dashboard_page.get_quick_launch_title()
-        assert title == "Quick Launch"
+        assert title == "Quick Launch", "Quick Launch doesnt exist"
 
         title = dashboard_page.get_buzz_latest_posts_title()
-        assert title == "Buzz Latest Posts"
+        assert title == "Buzz Latest Posts", "Buzz Latest Posts doesnt exist"
 
         title = dashboard_page.get_employees_leaves_today_title()
-        assert title == "Employees on Leave Today"
+        assert title == "Employees on Leave Today", "Employees on Leave Today doesnt exist"
 
         title = dashboard_page.get_employee_distribution_by_sub_unit_title()
-        assert title == "Employee Distribution by Sub Unit"
+        assert title == "Employee Distribution by Sub Unit", "Employee Distribution by Sub Unit doesnt exist"
 
         title = dashboard_page.get_employee_distribution_by_location_title()
-        assert title == "Employee Distribution by Location"
+        assert title == "Employee Distribution by Location", "Employee Distribution by Location doesnt exist"
 
 
