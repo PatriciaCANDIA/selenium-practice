@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 class TestSelenium:
-    def test_username_not_found(self):
+    def test_username_found(self):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -26,10 +26,11 @@ class TestSelenium:
         admin_page.click_icon_admin_page()
         time.sleep(2)
         admin_page.click_input_username_admin_page()
-        admin_page.type_in_input_username_admin_page("Adminn")
+        admin_page.type_in_input_username_admin_page("Admin")
         time.sleep(2)
         admin_page.click_button_search()
         time.sleep(5)
 
-        title = admin_page.get_title_no_records_found()
-        assert title == "No Records Found", "No Records Found does not appear"
+        title = admin_page.get_subtitle_table_username()
+        assert title == "Admin", "No Records Found"
+
