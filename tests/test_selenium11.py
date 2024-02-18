@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 class TestSelenium:
-    def test_employee_not_found(self):
+    def test_employee_found(self):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -24,15 +24,13 @@ class TestSelenium:
         pin_page = PinPage(driver)
         pin_page.click_icon_pin_page()
         time.sleep(2)
-        pin_page.click_input_employee_name()
-        pin_page.type_in_input_employee_name("Alicia")
-        time.sleep(5)
-        pin_page.click_button_search()
+        pin_page.click_button_add()
+        time.sleep(2)
+        pin_page.click_button_save()
         time.sleep(2)
 
-        title = pin_page.get_title_no_records_found()
-        assert title == "No Records Found", "Record Found"
+        title = pin_page.get_title_required_first_name()
+        assert title == "Required", "Required doesnt appear"
 
-
-
-
+        title = pin_page.get_title_required_last_name()
+        assert title == "Required", "Required doesnt appear"
