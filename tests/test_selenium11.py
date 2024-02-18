@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 class TestSelenium:
-    def test_employee_found(self):
+    def test_not_add_employee(self):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
