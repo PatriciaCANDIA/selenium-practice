@@ -12,6 +12,12 @@ class PinPage:
     BUTTON_SAVE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]")
     TEXT_REQUIRED_FIRST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/span")
     TEXT_REQUIRED_LAST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/span")
+    INPUT_EMPLOYEE_FIRST_NAME = (By.NAME, "firstName")
+    INPUT_EMPLOYEE_LAST_NAME = (By.NAME, "lastName")
+    INPUT_EMPLOYEE_ID = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input")
+    TITLE_PERSONAL_DETAILS = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/h6")
+    TITLE_INPUT_FIRST_NAME = (By.NAME, "firstName")
+    TITLE_INPUT_LAST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div/div/div[2]/div[3]/div[2]/input")
 
     def __init__(self, driver):
         self.driver = driver
@@ -55,3 +61,56 @@ class PinPage:
     def get_title_required_last_name(self):
         web_element: WebElement = self.driver.find_element(*self.TEXT_REQUIRED_LAST_NAME)
         return web_element.text
+
+    def click_input_employee_first_name(self):
+        web_element_input_employee_first_name = self.driver.find_element(*self.INPUT_EMPLOYEE_FIRST_NAME)
+        web_element_input_employee_first_name.click()
+
+    def type_in_input_employee_first_name(self, text):
+        web_element = self.driver.find_element(*self.INPUT_EMPLOYEE_FIRST_NAME)
+        web_element.send_keys(text)
+
+    def click_input_employee_last_name(self):
+        web_element_input_employee_last_name = self.driver.find_element(*self.INPUT_EMPLOYEE_LAST_NAME)
+        web_element_input_employee_last_name.click()
+
+    def type_in_input_employee_last_name(self, text):
+        web_element = self.driver.find_element(*self.INPUT_EMPLOYEE_LAST_NAME)
+        web_element.send_keys(text)
+
+    def click_input_employee_id(self):
+        web_element_input_employee_id = self.driver.find_element(*self.INPUT_EMPLOYEE_ID)
+        web_element_input_employee_id.click()
+
+    def type_in_input_employee_id(self, text):
+        web_element = self.driver.find_element(*self.INPUT_EMPLOYEE_ID)
+        web_element.send_keys(text)
+
+    def get_title_personal_details(self):
+        web_element: WebElement = self.driver.find_element(*self.TITLE_PERSONAL_DETAILS)
+        return web_element.text
+
+    def get_title_input_first_name(self):
+        web_element: WebElement = self.driver.find_element(*self.TITLE_INPUT_FIRST_NAME)
+        return web_element.text
+
+    def get_title_input_last_name(self):
+        web_element: WebElement = self.driver.find_element(*self.TITLE_INPUT_LAST_NAME)
+        return web_element.text
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
