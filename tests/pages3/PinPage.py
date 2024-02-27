@@ -17,7 +17,7 @@ class PinPage:
     INPUT_EMPLOYEE_ID = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input")
     TITLE_PERSONAL_DETAILS = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/h6")
     TITLE_INPUT_FIRST_NAME = (By.NAME, "firstName")
-    TITLE_INPUT_LAST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div/div/div[2]/div[3]/div[2]/input")
+    TITLE_INPUT_LAST_NAME = (By.NAME, "lastName")
 
     def __init__(self, driver):
         self.driver = driver

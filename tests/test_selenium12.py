@@ -30,22 +30,22 @@ class TestSelenium:
         pin_page.type_in_input_employee_first_name("Naomi")
         pin_page.click_input_employee_last_name()
         pin_page.type_in_input_employee_last_name("Campbell")
-        pin_page.click_input_employee_id()
-        pin_page.type_in_input_employee_id("022")
         pin_page.click_button_save()
         time.sleep(8)
 
         title = pin_page.get_title_personal_details()
         assert title == "Personal Details", "Personal Details doesnt appear"
-        time.sleep(2)
 
         title = pin_page.get_title_input_first_name()
-        assert title == "Naomi", "Required"
-        time.sleep(2)
+        assert title == "Naomi"
 
         title = pin_page.get_title_input_last_name()
-        assert title == "Campbell", "Required"
-        time.sleep(2)
+        assert title == "Campbell"
+
+
+
+
+
 
 
 
