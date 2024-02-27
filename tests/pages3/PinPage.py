@@ -98,7 +98,7 @@ class PinPage:
         web_element: WebElement = self.driver.find_element(*self.TITLE_INPUT_LAST_NAME)
         return web_element.text
 
-    
+
 
 
 
