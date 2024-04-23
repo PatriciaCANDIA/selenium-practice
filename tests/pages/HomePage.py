@@ -8,7 +8,7 @@ class HomePage:
     LINK_FRANCES = (By.ID, "js-link-box-fr")
     LINK_PORTUGUES = (By.ID, "js-link-box-pt")
     INPUT_SEARCH_BOX = (By.ID, "searchInput")
-    BUTTON_MAGNIFYING_GLASS= (By.XPATH, "//*[@id='search-form]/fieldset/button/i")
+    BUTTON_MAGNIFYING_GLASS = (By.XPATH, "//*[@id='search-form]/fieldset/button/i")
 
     #Funcion especial init. Cuando se instancia la clase se llama a esta funcion
     def __init__(self, driver):

@@ -3,11 +3,11 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class LoginPage:
-    HEADING_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div/div[1]/div/div[2]/h5")
+    HEADING_TITLE = (By.XPATH, "//h5[@class='oxd-text oxd-text--h5 orangehrm-login-title']")
     INPUT_USERNAME = (By.NAME, "username")
     INPUT_PASSWORD = (By.NAME, "password")
-    BUTTON_LOGIN = (By.XPATH, "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
-    INVALID_CREDENTIALS_TEXT = (By.XPATH, "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]")
+    BUTTON_LOGIN = (By.XPATH, "//button[@type='submit']")
+    INVALID_CREDENTIALS_TEXT = (By.XPATH, "//p[text()='Invalid credentials']")
 
     def __init__(self, driver):
         self.driver = driver

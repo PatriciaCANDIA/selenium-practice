@@ -3,11 +3,11 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class AdminPage:
-    ICON_ADMIN_PAGE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a")
-    INPUT_USERNAME_ADMIN_PAGE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")
-    BUTTON_SEARCH = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")
-    TITLE_NO_RECORDS_FOUND = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")
-    SUBTITLE_TABLE_USERNAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[2]/div")
+    ICON_ADMIN_PAGE = (By.XPATH, "//a[contains(@href, '/web/index.php/admin/viewAdminModule')]")
+    INPUT_USERNAME_ADMIN_PAGE = (By.XPATH, "//input[@class='oxd-input oxd-input--active']")
+    BUTTON_SEARCH = (By.XPATH, "//button[@type='submit']")
+    TITLE_NO_RECORDS_FOUND = (By.XPATH, "//span[@class='oxd-text oxd-text--span']")
+    SUBTITLE_TABLE_USERNAME = (By.XPATH, "//div[@class='oxd-table']/div/div/div/div[2]")
 
     def __init__(self, driver):
         self.driver = driver

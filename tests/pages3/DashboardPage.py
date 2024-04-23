@@ -3,14 +3,14 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class DashboardPage:
-    HEADING_TITLE_HOME_PAGE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/header/div[1]/div[1]/span/h6")
-    TIME_AT_WORK_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div/p")
-    MY_ACTIONS_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div/div[1]/div/p")
-    QUICK_LAUNCH_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[3]/div/div[1]/div/p")
-    BUZZ_LATEST_POSTS_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[4]/div/div[1]/div/p")
-    EMPLOYEES_ON_LEAVE_TODAY_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[5]/div/div[1]/div/p")
-    EMPLOYEE_DISTRIBUTION_BY_SUB_UNIT_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[6]/div/div[1]/div/p")
-    EMPLOYEE_DISTRIBUTION_BY_LOCATION_SECTION_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[7]/div/div[1]/div/p")
+    HEADING_TITLE_HOME_PAGE = (By.XPATH, "//span[@class='oxd-topbar-header-breadcrumb']")
+    TIME_AT_WORK_SECTION_TITLE = (By.XPATH, "//p[text()='Time at Work']")
+    MY_ACTIONS_SECTION_TITLE = (By.XPATH, "//p[text()='My Actions']")
+    QUICK_LAUNCH_SECTION_TITLE = (By.XPATH, "//p[text()='Quick Launch']")
+    BUZZ_LATEST_POSTS_SECTION_TITLE = (By.XPATH, "//p[text()='Buzz Latest Posts']")
+    EMPLOYEES_ON_LEAVE_TODAY_SECTION_TITLE = (By.XPATH, "//p[text()='Employees on Leave Today']")
+    EMPLOYEE_DISTRIBUTION_BY_SUB_UNIT_SECTION_TITLE = (By.XPATH, "//p[text()='Employee Distribution by Sub Unit']")
+    EMPLOYEE_DISTRIBUTION_BY_LOCATION_SECTION_TITLE = (By.XPATH, "//p[text()='Employee Distribution by Location']")
 
     def __init__(self, driver):
         self.driver = driver

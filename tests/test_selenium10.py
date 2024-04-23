@@ -25,10 +25,10 @@ class TestSelenium:
         pin_page.click_icon_pin_page()
         time.sleep(2)
         pin_page.click_input_employee_name()
-        pin_page.type_in_input_employee_name("Bobby")
+        pin_page.type_in_input_employee_name("Amelia")
         time.sleep(5)
         pin_page.click_button_search()
         time.sleep(2)
 
         title = pin_page.get_subtitle_table_username()
-        assert title == "Bobby", "No record found"
+        assert title == "Amelia", "No record found"

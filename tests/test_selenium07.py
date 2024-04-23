@@ -27,7 +27,6 @@ class TestSelenium:
         time.sleep(2)
         admin_page.click_input_username_admin_page()
         admin_page.type_in_input_username_admin_page("Adminn")
-        time.sleep(2)
         admin_page.click_button_search()
         time.sleep(5)
 

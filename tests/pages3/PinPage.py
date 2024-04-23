@@ -3,18 +3,18 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class PinPage:
-    ICON_PIN_PAGE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/aside/nav/div[2]/ul/li[2]")
-    INPUT_EMPLOYEE_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input")
-    BUTTON_SEARCH = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")
-    TITLE_NO_RECORDS_FOUND = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")
-    SUBTITLE_TABLE_USERNAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[3]/div")
-    BUTTON_ADD = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[1]/button")
-    BUTTON_SAVE = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]")
-    TEXT_REQUIRED_FIRST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/span")
-    TEXT_REQUIRED_LAST_NAME = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/span")
+    ICON_PIN_PAGE = (By.XPATH, "//a[contains(@href, '/web/index.php/pim/viewPimModule')]")
+    INPUT_EMPLOYEE_NAME = (By.XPATH, "//div[@class='oxd-autocomplete-wrapper']/div")  #VER. Me salen 2
+    BUTTON_SEARCH = (By.XPATH, "//button[@type='submit']")
+    TITLE_NO_RECORDS_FOUND = (By.XPATH, "//span[@class='oxd-text oxd-text--span']")
+    SUBTITLE_TABLE_USERNAME = (By.XPATH, "//p[text()='Amelia']") #VER
+    BUTTON_ADD = (By.XPATH, "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
+    BUTTON_SAVE = (By.XPATH, "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
+    TEXT_REQUIRED_FIRST_NAME = (By. XPATH, "//input[@name='firstName']/../following-sibling::span")
+    TEXT_REQUIRED_LAST_NAME = (By.XPATH, "//input[@name='lastName']/../following-sibling::span")
     INPUT_EMPLOYEE_FIRST_NAME = (By.NAME, "firstName")
     INPUT_EMPLOYEE_LAST_NAME = (By.NAME, "lastName")
-    INPUT_EMPLOYEE_ID = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input")
+    INPUT_EMPLOYEE_ID = (By.XPATH, "//input[@class='oxd-input oxd-input--active']")
     TITLE_PERSONAL_DETAILS = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/h6")
     TITLE_INPUT_FIRST_NAME = (By.NAME, "firstName")
     TITLE_INPUT_LAST_NAME = (By.NAME, "lastName")

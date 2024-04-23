@@ -3,12 +3,12 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class ResetPasswordPage:
-    LINK_FORGOT_PASSWORD = (By.XPATH, "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p")
-    RESET_PASSWORD_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/form/h6")
+    LINK_FORGOT_PASSWORD = (By.XPATH, "//div[@class='orangehrm-login-forgot']")
+    RESET_PASSWORD_TITLE = (By.XPATH, "//h6[@class='oxd-text oxd-text--h6 orangehrm-forgot-password-title']")
     USERNAME_INPUT = (By.NAME, "username")
-    CANCEL_BUTTON = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/form/div[2]/button[1]")
-    RESET_PASSWORD_BUTTON = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/form/div[2]/button[2]")
-    REQUIRED_MESSAGE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/form/div[1]/div/span")
+    CANCEL_BUTTON = (By.XPATH, "//button[@type='button']")
+    RESET_PASSWORD_BUTTON = (By.XPATH, "//button[@type='submit']")
+    REQUIRED_MESSAGE = (By.XPATH, "//input[@name='username']/../following-sibling::span")
     SUCCESSFULLY_MESSAGE_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/h6")
 
     def __init__(self, driver):
