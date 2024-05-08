@@ -25,6 +25,7 @@ class TestSelenium:
         pin_page.click_icon_pin_page()
         time.sleep(2)
         pin_page.click_input_employee_name()
+        time.sleep(2)
         pin_page.type_in_input_employee_name("Amelia")
         time.sleep(5)
         pin_page.click_button_search()

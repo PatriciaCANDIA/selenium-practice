@@ -14,8 +14,6 @@ class DashboardPage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.driver = driver
-        self.driver = driver
 
     def get_title_home_page(self):
         web_element: WebElement = self.driver.find_element(*self.HEADING_TITLE_HOME_PAGE)

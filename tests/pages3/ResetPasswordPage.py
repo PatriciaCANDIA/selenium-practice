@@ -9,7 +9,7 @@ class ResetPasswordPage:
     CANCEL_BUTTON = (By.XPATH, "//button[@type='button']")
     RESET_PASSWORD_BUTTON = (By.XPATH, "//button[@type='submit']")
     REQUIRED_MESSAGE = (By.XPATH, "//input[@name='username']/../following-sibling::span")
-    SUCCESSFULLY_MESSAGE_TITLE = (By.XPATH, "//*[@id='app']/div[1]/div[1]/div/h6")
+    SUCCESSFULLY_MESSAGE_TITLE = (By.XPATH, "//h6")
 
     def __init__(self, driver):
         self.driver = driver

@@ -4,7 +4,7 @@ from selenium.webdriver.remote.webelement import WebElement
 
 class PinPage:
     ICON_PIN_PAGE = (By.XPATH, "//a[contains(@href, '/web/index.php/pim/viewPimModule')]")
-    INPUT_EMPLOYEE_NAME = (By.XPATH, "//div[@class='oxd-autocomplete-wrapper']/div")  #VER. Me salen 2
+    INPUT_EMPLOYEE_NAME = (By.XPATH, "//label[text()='Employee Name']/../following-sibling::input")
     BUTTON_SEARCH = (By.XPATH, "//button[@type='submit']")
     TITLE_NO_RECORDS_FOUND = (By.XPATH, "//span[@class='oxd-text oxd-text--span']")
     SUBTITLE_TABLE_USERNAME = (By.XPATH, "//p[text()='Amelia']") #VER
@@ -15,7 +15,7 @@ class PinPage:
     INPUT_EMPLOYEE_FIRST_NAME = (By.NAME, "firstName")
     INPUT_EMPLOYEE_LAST_NAME = (By.NAME, "lastName")
     INPUT_EMPLOYEE_ID = (By.XPATH, "//input[@class='oxd-input oxd-input--active']")
-    TITLE_PERSONAL_DETAILS = (By.XPATH, "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/h6")
+    TITLE_PERSONAL_DETAILS = (By.XPATH, "//*[@class='orangehrm-edit-employee-content']//h6")
     TITLE_INPUT_FIRST_NAME = (By.NAME, "firstName")
     TITLE_INPUT_LAST_NAME = (By.NAME, "lastName")
 
